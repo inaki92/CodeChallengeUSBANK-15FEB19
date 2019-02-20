@@ -23,7 +23,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Contac
 
     class ContactsViewHolder extends RecyclerView.ViewHolder{
 
-        TextView name, email, add;
+        TextView name, email, add, phone;
 
         public ContactsViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -31,6 +31,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Contac
             name = itemView.findViewById(R.id.tv_name);
             email = itemView.findViewById(R.id.tv_email);
             add = itemView.findViewById(R.id.tv_add);
+            phone = itemView.findViewById(R.id.tv_phone);
         }
     }
 
@@ -49,7 +50,8 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Contac
         contactsViewholder.name.setText(contList.getContacts().get(i).getName());
         contactsViewholder.add.setText(contList.getContacts().get(i).getAddress());
         contactsViewholder.email.setText(contList.getContacts().get(i).getEmail());
-        contactsViewholder.email.setText(contList.getContacts().get(i).getPhone().getMobile());
+        contactsViewholder.phone.setText(contList.getContacts().get(i).getPhone().getMobile());
+
     }
 
     @Override
